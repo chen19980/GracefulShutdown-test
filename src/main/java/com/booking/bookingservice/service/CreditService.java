@@ -28,6 +28,10 @@ public class CreditService {
 
         System.out.println("@@@ makePayment service start " + Instant.now().toString());
 
+        try {
+            Thread.sleep(11000);
+        } catch (Exception e) {
+        }
 
         OrderDto order = exchange.getMessage().getBody(OrderDto.class);
         String id = exchange.getIn().getHeader("id", String.class);
@@ -50,6 +54,11 @@ public class CreditService {
     public void refundPayment(Exchange exchange){
 
         System.out.println("@@@ refundPayment service start " + Instant.now().toString());
+
+        try {
+            Thread.sleep(30000);
+        } catch (Exception e) {
+        }
 
         String id = exchange.getIn().getHeader("id", String.class);
         String customerId = exchange.getIn().getHeader("customerId", String.class);

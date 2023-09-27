@@ -55,7 +55,7 @@ public class SagaRoute extends RouteBuilder {
                 .log(LoggingLevel.INFO, "Id: ${header.id}, Order Received: ${body}")
                 .saga()
 
-                .timeout(60, TimeUnit.SECONDS)
+                .timeout(10, TimeUnit.SECONDS)
                 .propagation(SagaPropagation.REQUIRES_NEW)
                 .compensation("direct:wholecancel")
 

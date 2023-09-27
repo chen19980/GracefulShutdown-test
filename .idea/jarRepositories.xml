@@ -16,5 +16,15 @@
       <option name="name" value="JBoss Community repository" />
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="fir-group" />
+      <option name="name" value="fir-group" />
+      <option name="url" value="http://nexus.fstop.com.tw:8081/repository/fir-group/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="http://nexus.fstop.com.tw:8081/repository/fir-group/" />
+    </remote-repository>
   </component>
 </project>

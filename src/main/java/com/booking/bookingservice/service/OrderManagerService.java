@@ -48,13 +48,7 @@ public class OrderManagerService {
 
         System.out.println("@@@ shipOrder service start " + Instant.now().toString());
 
-        try {
-            Thread.sleep(10000);
-        } catch (Exception e) {
-        }
-
-
-            String id = exchange.getIn().getHeader("id", String.class);
+        String id = exchange.getIn().getHeader("id", String.class);
         OrderDto order = orders.get(id);
         log.info("Preparing to ship Order. ID: [" + order + "]");
         if (order.getQuantity() > 10) {
